@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 
 // thao tac với lớp DataAccessLayer
 using SinhVien3Layer.DataAccess;
+using SinhVien3Layer.BusinessObject;
 
 
 namespace SinhVien3Layer.BusinessLogic
@@ -38,5 +39,11 @@ namespace SinhVien3Layer.BusinessLogic
             return connData.GetDataTable(sql);        
         }
 
+
+        // hàm thêm 1 sinh viên
+        public void ThemSV(SinhVien sv)
+        {
+
+        }
     }
 }

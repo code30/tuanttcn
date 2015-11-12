@@ -50,6 +50,22 @@ namespace SinhVien3Layer
             dataGridViewSinhVien.DataSource = svBUS.LayDanhSachSinhVien();
         }
 
+        private void dataGridViewSinhVien_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            // đặt dòng hiện tại
+            int dong = e.RowIndex;
+            // thực hiện binding data lên các control khi kích chuột vào dòng Datagridview
+            // Cells phải trùng với name colum
+            txtMaSV.Text = dataGridViewSinhVien.Rows[dong].Cells["MaSV"].Value.ToString();
+            txtHoTen.Text = dataGridViewSinhVien.Rows[dong].Cells["TenSV"].Value.ToString();
+            txtTinh.Text = dataGridViewSinhVien.Rows[dong].Cells["Tinh"].Value.ToString();
+            dtPickerNgaySinh.Text = dataGridViewSinhVien.Rows[dong].Cells["NgaySinh"].Value.ToString();
+            txtDiaChi.Text = dataGridViewSinhVien.Rows[dong].Cells["DiaChi"].Value.ToString();
+            cboGioiTinh.SelectedValue = dataGridViewSinhVien.Rows[dong].Cells["colGioiTinh"].Value.ToString();
+            cboKhoa.SelectedValue = dataGridViewSinhVien.Rows[dong].Cells["colMaKhoa"].Value.ToString();
+
+        }
+
   
     }
 }

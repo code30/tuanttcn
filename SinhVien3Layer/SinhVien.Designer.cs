@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.dataGridViewSinhVien = new System.Windows.Forms.DataGridView();
+            this.MaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGioiTinh = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaKhoa = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.btnKhongLuu = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -48,13 +55,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaSV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.MaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGioiTinh = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaKhoa = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSinhVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +76,65 @@
             this.dataGridViewSinhVien.Name = "dataGridViewSinhVien";
             this.dataGridViewSinhVien.Size = new System.Drawing.Size(688, 214);
             this.dataGridViewSinhVien.TabIndex = 45;
+            this.dataGridViewSinhVien.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSinhVien_RowEnter);
+            // 
+            // MaSV
+            // 
+            this.MaSV.DataPropertyName = "MaSV";
+            this.MaSV.FillWeight = 50F;
+            this.MaSV.HeaderText = "Mã SV";
+            this.MaSV.Name = "MaSV";
+            this.MaSV.ReadOnly = true;
+            this.MaSV.Width = 50;
+            // 
+            // TenSV
+            // 
+            this.TenSV.DataPropertyName = "TenSV";
+            this.TenSV.HeaderText = "Tên SV";
+            this.TenSV.Name = "TenSV";
+            this.TenSV.ReadOnly = true;
+            this.TenSV.Width = 150;
+            // 
+            // colGioiTinh
+            // 
+            this.colGioiTinh.DataPropertyName = "GioiTinh";
+            this.colGioiTinh.HeaderText = "Giới Tính";
+            this.colGioiTinh.Name = "colGioiTinh";
+            this.colGioiTinh.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colGioiTinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.HeaderText = "Ngày Sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.ReadOnly = true;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.FillWeight = 200F;
+            this.DiaChi.HeaderText = "Dịa Chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            this.DiaChi.Width = 200;
+            // 
+            // Tinh
+            // 
+            this.Tinh.DataPropertyName = "Tinh";
+            this.Tinh.HeaderText = "Tỉnh";
+            this.Tinh.Name = "Tinh";
+            this.Tinh.ReadOnly = true;
+            // 
+            // colMaKhoa
+            // 
+            this.colMaKhoa.DataPropertyName = "MaKhoa";
+            this.colMaKhoa.FillWeight = 200F;
+            this.colMaKhoa.HeaderText = "Khoa";
+            this.colMaKhoa.Name = "colMaKhoa";
+            this.colMaKhoa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colMaKhoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colMaKhoa.Width = 200;
             // 
             // btnKhongLuu
             // 
@@ -244,64 +303,6 @@
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 27;
             this.label1.Text = "Mã SV:";
-            // 
-            // MaSV
-            // 
-            this.MaSV.DataPropertyName = "MaSV";
-            this.MaSV.FillWeight = 50F;
-            this.MaSV.HeaderText = "Mã SV";
-            this.MaSV.Name = "MaSV";
-            this.MaSV.ReadOnly = true;
-            this.MaSV.Width = 50;
-            // 
-            // TenSV
-            // 
-            this.TenSV.DataPropertyName = "TenSV";
-            this.TenSV.HeaderText = "Tên SV";
-            this.TenSV.Name = "TenSV";
-            this.TenSV.ReadOnly = true;
-            this.TenSV.Width = 150;
-            // 
-            // colGioiTinh
-            // 
-            this.colGioiTinh.DataPropertyName = "GioiTinh";
-            this.colGioiTinh.HeaderText = "Giới Tính";
-            this.colGioiTinh.Name = "colGioiTinh";
-            this.colGioiTinh.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colGioiTinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // NgaySinh
-            // 
-            this.NgaySinh.DataPropertyName = "NgaySinh";
-            this.NgaySinh.HeaderText = "Ngày Sinh";
-            this.NgaySinh.Name = "NgaySinh";
-            this.NgaySinh.ReadOnly = true;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.FillWeight = 200F;
-            this.DiaChi.HeaderText = "Dịa Chỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
-            this.DiaChi.Width = 200;
-            // 
-            // Tinh
-            // 
-            this.Tinh.DataPropertyName = "Tinh";
-            this.Tinh.HeaderText = "Tỉnh";
-            this.Tinh.Name = "Tinh";
-            this.Tinh.ReadOnly = true;
-            // 
-            // colMaKhoa
-            // 
-            this.colMaKhoa.DataPropertyName = "MaKhoa";
-            this.colMaKhoa.FillWeight = 200F;
-            this.colMaKhoa.HeaderText = "Khoa";
-            this.colMaKhoa.Name = "colMaKhoa";
-            this.colMaKhoa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colMaKhoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colMaKhoa.Width = 200;
             // 
             // SinhVien
             // 

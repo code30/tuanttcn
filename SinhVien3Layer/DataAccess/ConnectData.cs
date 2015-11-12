@@ -26,7 +26,7 @@ namespace SinhVien3Layer.DataAccess
         // hàm kết nối
         public void Connect()
         {
-            string strConn = @"Data Source=2-PC\SQLEXPRESS;Initial Catalog=SinhVienDB;User ID=sa;Password=sa";
+            string strConn = @"Data Source=PACS-SERVER\SQLEXPRESS;Initial Catalog=SinhVienDB;User ID=sa;Password=sa";
 
             try
             {
