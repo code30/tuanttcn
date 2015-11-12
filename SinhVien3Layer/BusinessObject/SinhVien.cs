@@ -2,71 +2,73 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace SinhVien3Layer.BusinessObject
 {
-    /// <summary>
-    /// Lớp sinh viên
-    /// Thuộc tính
-    /// - Mã Sinh viên
-    /// - Họ và tên
-    /// </summary>
     class SinhVien
     {
-        private string MaSV;
-        private string TenSV;
-        private DateTime NgaySinh;
-        private int GioiTinh;
-        private string Tinh;
-        private string DiaChi;
-        private string MaKhoa;
+        //public string MaSV { [CompilerGenerated]get; [CompilerGenerated]set;}
+        //public string TenSV { [CompilerGenerated]get; [CompilerGenerated]set;}
+        //public DateTime NgaySinh { [CompilerGenerated]get; [CompilerGenerated]set;}
+        //public int GioiTinh { [CompilerGenerated]get; [CompilerGenerated]set;}
+        //public string Tinh { [CompilerGenerated]get; [CompilerGenerated]set;}
+        //public string MaKhoa { [CompilerGenerated]get; [CompilerGenerated]set;}
+        //public string DiaChi { [CompilerGenerated]get; [CompilerGenerated]set;}
 
-        public string MaKhoa
-        {
-            get { return MaKhoa; }
-            set { MaKhoa = value; }
-        }
-	
+        public string masv;
+        public string hoten;
+        public DateTime ngaysinh;
+        public int gioitinh;
+        public string tinh;
+        public string diachi;
 
         public string DiaChi
         {
-            get { return DiaChi; }
-            set { DiaChi = value; }
+            get { return diachi; }
+            set { diachi = value; }
+        }
+	
+        private string makhoa;
+
+
+        public string MaKhoa
+        {
+            get { return makhoa; }
+            set { makhoa = value; }
         }
 	
 
         public string Tinh
         {
-            get { return Tinh; }
-            set { Tinh = value; }
+            get { return tinh; }
+            set { tinh = value; }
         }
 	
 
         public int GioiTinh
         {
-            get { return GioiTinh; }
-            set { GioiTinh = value; }
+            get { return gioitinh; }
+            set { gioitinh = value; }
         }
 	
 
         public DateTime NgaySinh
         {
-            get { return NgaySinh; }
-            set { NgaySinh = value; }
+            get { return ngaysinh; }
+            set { ngaysinh = value; }
         }
 	
-
-        public string TenSV
-        {
-            get { return TenSV; }
-            set { TenSV = value; }
-        }
-	
-
         public string MaSV
         {
-            get { return MaSV; }
-            set { MaSV = value; }
+            get { return masv; }
+            set { masv = value; }
         }
-	 
+        
+        public string TenSV
+        {
+            get { return hoten; }
+            set { hoten = value; }
+        }
+	
     }
 }

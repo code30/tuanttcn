@@ -73,5 +73,14 @@ namespace SinhVien3Layer.DataAccess
             return false;
         }
 
+        // Hàm lấy mã cuối cùng
+        public string GetLastID(string nameTable, string nameField)
+        {
+            string sql = "select TOP 1" + nameField + "from" + nameTable + "order by" + nameField + "desc";
+            //thực hiện câu truy vấn trên
+            GetDataTable(sql);
+            return dataTable.Rows[0][nameField].ToString();//
+        }
+
     }
 }

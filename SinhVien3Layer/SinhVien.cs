@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 // Tầng này chỉ giao tiếp với BusinessLogic
 using SinhVien3Layer.BusinessLogic;
+using SinhVien3Layer.BusinessObject;
 
 
 namespace SinhVien3Layer
@@ -63,6 +64,41 @@ namespace SinhVien3Layer
             txtDiaChi.Text = dataGridViewSinhVien.Rows[dong].Cells["DiaChi"].Value.ToString();
             cboGioiTinh.SelectedValue = dataGridViewSinhVien.Rows[dong].Cells["colGioiTinh"].Value.ToString();
             cboKhoa.SelectedValue = dataGridViewSinhVien.Rows[dong].Cells["colMaKhoa"].Value.ToString();
+
+        }
+        /// <summary>
+        /// Hàm dùng để Enable các button
+        /// </summary>
+        /// <param name="editing"></param>
+        /// Created by Code30 - 12/11/2015
+        /// 
+        private void EnableButton(bool editing)
+        {
+            //button
+            btnSua.Enabled = !editing;
+            btnXoa.Enabled = !editing;
+            btnLuu.Enabled = editing;
+            btnKhongLuu.Enabled = editing;
+
+            //textbox, combobox
+            txtHoTen.Enabled = editing;
+            txtDiaChi.Enabled = editing;
+            txtTinh.Enabled = editing;
+            cboGioiTinh.Enabled = editing;
+            cboKhoa.Enabled = editing;
+        }
+
+        /// <summary>
+        /// Hàm sự kiện thêm
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            EnableButton(true);
+            //Load LastID lên mã sinh viên
+            txtMaSV.Text = svBUS.SinhVienNextID();
 
         }
 
