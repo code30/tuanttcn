@@ -26,7 +26,7 @@ namespace SinhVien3Layer.DataAccess
         // hàm kết nối
         public void Connect()
         {
-            string strConn = @"Data Source=PACS-SERVER\SQLEXPRESS;Initial Catalog=SinhVienDB;User ID=sa;Password=sa";
+            string strConn = @"Data Source=2-PC\SQLEXPRESS;Initial Catalog=SinhVienDB;User ID=sa;Password=sa";
 
             try
             {
@@ -76,7 +76,9 @@ namespace SinhVien3Layer.DataAccess
         // Hàm lấy mã cuối cùng
         public string GetLastID(string nameTable, string nameField)
         {
-            string sql = "select TOP 1" + nameField + "from" + nameTable + "order by" + nameField + "desc";
+            string sql = "SELECT TOP 1 " + nameField + " FROM " + nameTable + " ORDER BY " + nameField + " DESC";
+            //string sql = "SELECT TOP 1 " + nameField + " FROM " + nameTable + " ORDER BY " + nameField + " DESC";
+
             //thực hiện câu truy vấn trên
             GetDataTable(sql);
             return dataTable.Rows[0][nameField].ToString();//

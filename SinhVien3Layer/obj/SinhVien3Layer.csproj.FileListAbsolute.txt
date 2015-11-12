@@ -16,3 +16,11 @@ D:\DKVP\Doc C#\App_code\tuanttcn.git\trunk\SinhVien3Layer\obj\Debug\SinhVien3Lay
 D:\DKVP\Doc C#\App_code\tuanttcn.git\trunk\SinhVien3Layer\obj\Debug\SinhVien3Layer.csproj.GenerateResource.Cache
 D:\DKVP\Doc C#\App_code\tuanttcn.git\trunk\SinhVien3Layer\bin\Debug\SinhVien3Layer.exe
 D:\DKVP\Doc C#\App_code\tuanttcn.git\trunk\SinhVien3Layer\bin\Debug\SinhVien3Layer.pdb
+C:\Users\TuanHIS\Desktop\SinhVien3Layer\obj\Debug\SinhVien3Layer.exe
+C:\Users\TuanHIS\Desktop\SinhVien3Layer\obj\Debug\SinhVien3Layer.pdb
+C:\Users\TuanHIS\Desktop\SinhVien3Layer\bin\Debug\SinhVien3Layer.exe
+C:\Users\TuanHIS\Desktop\SinhVien3Layer\bin\Debug\SinhVien3Layer.pdb
+C:\Users\TuanHIS\Desktop\SinhVien3Layer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\TuanHIS\Desktop\SinhVien3Layer\obj\Debug\SinhVien3Layer.Properties.Resources.resources
+C:\Users\TuanHIS\Desktop\SinhVien3Layer\obj\Debug\SinhVien3Layer.SinhVien.resources
+C:\Users\TuanHIS\Desktop\SinhVien3Layer\obj\Debug\SinhVien3Layer.csproj.GenerateResource.Cache

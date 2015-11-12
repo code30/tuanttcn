@@ -9,6 +9,9 @@ using System.Windows.Forms;
 using SinhVien3Layer.BusinessLogic;
 using SinhVien3Layer.BusinessObject;
 
+// xử lý chữ hoa đầu dòng
+using System.Globalization;
+
 
 namespace SinhVien3Layer
 {
@@ -86,6 +89,9 @@ namespace SinhVien3Layer
             txtTinh.Enabled = editing;
             cboGioiTinh.Enabled = editing;
             cboKhoa.Enabled = editing;
+
+            // datagridView sinh viên
+            dataGridViewSinhVien.Enabled = !editing;
         }
 
         /// <summary>
@@ -97,11 +103,30 @@ namespace SinhVien3Layer
         private void btnThem_Click(object sender, EventArgs e)
         {
             EnableButton(true);
+            ResetControlValue();
             //Load LastID lên mã sinh viên
             txtMaSV.Text = svBUS.SinhVienNextID();
-
+            
         }
 
-  
+        /// <summary>
+        /// hàm reset các textbox, combo box
+        /// đưa con trỏ chuột về 1 textbox
+        /// chuyển đổi textbox chữ thường thành chữ hoa
+        /// </summary>
+        /// Created by Code30 - 12/11/2015
+        private void ResetControlValue()
+        {
+            txtHoTen.Text = "";
+            txtHoTen.Focus();// đặt con trỏ chuột vào textbox Họ Tên
+            //txtHoTen.Text = txtHoTen.Text.ToUpper();// chuyển chữ thường về chữ hoa
+            txtHoTen.CharacterCasing = CharacterCasing.Upper;// chuyển chữ thường về chữ hoa
+            txtTinh.Text = "";
+            txtDiaChi.Text = "";
+            cboGioiTinh.Text = "";
+            dtPickerNgaySinh.Text = "";
+            cboKhoa.Text = "";
+        }
+                 
     }
 }
